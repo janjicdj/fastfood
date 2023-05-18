@@ -1,0 +1,119 @@
+#make_pizza{
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)), url(img/pozadina_za_pizzu.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#jelovnik{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#jelovnik li{
+    margin: 0 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+#pizzaBtn{
+    color: rgb(255, 140, 178);
+}
+
+.okvir{
+    width: 500px;
+    text-align: left;
+    margin: auto;
+    position: relative;
+    right: 200px;
+}
+
+.pizza{
+    display: grid;
+    grid-template-areas:"div pizza";
+    grid-template-columns: 7fr 0fr;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.info, .info_pizza{
+    display: grid;
+    grid-template-areas: "naziv cena"
+                        "sastojci cena";
+    grid-template-columns: 7fr 1fr;
+    transition: 0.3s;
+}
+
+.pizza img{
+    grid-area: pizza;
+    height: 130%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    left: 100%;
+    top: -30px;
+    padding-left: 80px;
+}
+
+.naziv{
+    font-weight: bold;
+    grid-area: naziv;
+    color: rgb(255, 140, 178);
+}
+
+.sastojci{
+    font-style: italic;
+    grid-area: sastojci;
+    font-size: smaller;
+    color: rgb(211, 211, 211);
+}
+
+.info_pizza:hover + img{
+    animation: fade-in-pizza 250s;
+    opacity: 1;
+    cursor: pointer;
+}
+.info:hover + img{
+    animation: fade-in 2s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.info:hover, .info_pizza:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes fade-in-pizza {
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    0.5%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(3600deg);
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+#okvir_burger{
+    display: none;
+}
+#okvir_drink{
+    display: none;
+}
+#okvir_drink .info p{
+    padding: 10px 0;
+}

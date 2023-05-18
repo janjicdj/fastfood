@@ -1,0 +1,23 @@
+.contact{
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)), url(img/guzva.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: wheat;
+    padding: 200px;
+}
+.contact div h2{
+    padding-bottom: 50px;
+}
+
+.contact div a{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition-duration: 400ms;
+    padding: 15px 40px;
+}
+
+.contact div a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}

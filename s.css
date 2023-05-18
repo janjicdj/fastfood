@@ -1,0 +1,667 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 5em;
+}
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)), url(img/burger2.jpg);
+    background-size: cover;
+    margin: auto;
+    background-attachment: fixed;
+    color: white;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    transition: 1s;
+    width: 100%;
+}
+
+nav.scrolled{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: black;
+    z-index: 15;
+}
+
+nav a img{
+    width: 100px;
+    transition: 1s;
+}
+
+nav.scrolled a img{
+    padding: 2px 0;
+    width: 50px;
+}
+
+#nav-links{
+    padding-left: 900px;
+    padding-right: 50px;
+}
+
+nav .fas{
+    display: none;
+}
+
+nav .fa{
+    display: none;
+}
+
+#nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 28px;
+}
+
+#nav-links ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    transition: 1s;
+    color: white;
+}
+
+
+#nav-links ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: rgb(255, 140, 178);
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+#nav-links ul li a:hover::after{
+    width: 100%;
+}
+
+#pocetna{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+#pocetna h1{
+    font-size: 62px;
+}
+
+#pocetna p{
+    font-size: 13px;
+    align-self: center;
+    padding: 50px;
+}
+
+#pocetna a{
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    align-self: center;
+    transition-duration: 400ms;
+    padding: 13px 40px;
+}
+
+#pocetna a:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------SERVICES-------- */
+
+.padajuci ul{
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    cursor: pointer;
+    padding-top: 23px;
+}
+.padajuci ul li{
+    padding-top: 10px;
+}
+
+.padajuci:hover ul{
+    display: flex;
+}
+
+nav.scrolled .padajuci:hover ul li{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* --------------------------usluge-------------------------------- */
+
+.usluge{
+    width: 80%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+}
+
+.ponude{
+    margin-top: 50px;
+    display: flex;
+    min-height: 200px;
+    justify-content: space-between;
+}
+
+.ponuda{
+    font-size: 13px;
+    width: 29%;
+    transition: 500ms;
+    cursor: pointer;
+    position: relative;
+    color: rgb(26, 87, 0);
+}
+.ponuda img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+/* .ponuda h2, .ponuda p{
+    position: absolute;
+} */
+#standard{
+    background-color: rgba(154, 154, 154,0.7);
+}
+#gold{
+    background-color: rgba(229, 255, 82,0.7);
+}
+#premium{
+    background-color: rgba(235, 82, 255,0.7);
+}
+
+.ponuda:hover{
+    box-shadow: 0 0 20px 0 rgba(91, 103, 41, 0.6);
+}
+
+.ponude h2{
+    padding-top: 50px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+/* --------------------------hot combo--------------------- */
+
+/* #hot_combo{
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url(img/pozadina_za_hotcombo.jpg);
+    background-size: cover;
+    font-size: larger;
+    padding-top: 6%;
+    overflow: hidden;
+
+}
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+}
+.combo{
+    margin: 2px;
+    width: 45%;
+    position: relative;
+}
+
+#combo_1.scrolled{
+    animation: slide1 1s;
+}
+
+#combo_2.scrolled{
+    animation: slide2 1s;
+}
+
+.text_combo{
+    margin: 2px;
+    position: absolute;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    font-size: 55px;
+    cursor: default;
+}
+
+.combo img{
+    margin: 2px;
+    width: 95%;
+    transition: 1s;
+}
+.combo .name{
+    transition: 0.5s;
+}
+.combo:hover .name{
+    color: rgba(255, 255, 255, 0.0);
+}
+.combo:hover img{
+    box-shadow: 0 0 20px 0 rgba(91, 103, 41, 0.6);
+    opacity: 1;
+    cursor: default;
+}
+.combo:hover .price{
+    transform: scale(1.5, 1.5);
+}
+.price{
+    background-color: rgb(255, 140, 178);
+    color: rgb(57, 188, 0);
+    text-align: end;
+    width: min-content;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: none;
+    transition: 0.5s;
+}
+
+@keyframes slide1 {
+    0%{ 
+        left: -20px;
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes slide2 {
+    0%{ 
+        right: -20px;
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        right: 0;
+    }
+} */
+/* ----------------------------projekti--------------------- */
+
+.projekti{
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.projekti h1{
+    font-size: 35px;
+}
+
+.album{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.hov{
+    width: 30%;
+    transition: 0.5s;
+    position: relative;    
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.hov img{
+    max-width: 100%;
+    transition: 500ms;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: 500ms;
+}
+
+.layer:hover{
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.layer h3{
+    display: none;
+    padding: 25% 0;
+    color: white;
+}
+
+.layer:hover h3{
+    display: block;
+}
+
+/* .hov:hover{
+    overflow: visible;
+}
+
+.hov:hover img{
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(91, 103, 41, 0.6);
+    opacity: 1;
+	transform: scale(1.15,1.15);
+	-webkit-transform:scale(1.15,1.15);
+	-moz-transform:scale(1.15,1.15);
+	-ms-transform:scale(1.15,1.15);
+	-o-transform:scale(1.15,1.15);
+} */
+
+
+
+/* ---------------------------DELIVERY---------------------- */
+
+/* #delivery{
+    font-family: 'Poppins', sans-serif;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-image: linear-gradient(rgba(73, 252, 94, 0.8),rgba(255, 103, 209, 0.7)), url(https://greenpak.supplies/wp-content/uploads/2021/04/Gourmet-Burger-Box-standard-Large.jpg);
+    background-size: cover;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+#icons{
+    grid-area: 1/1/1/1;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+#icons img{
+    height: 100px;
+}
+.icon_container{
+    opacity: 0;
+    position: relative;
+}
+.icon_container.scrolled{
+    animation: fade-in 2s;
+    opacity: 1;
+} */
+
+/* #icon_container1.scrolled{
+    animation: fade-in 1s ease-in;
+}
+#icon_container2.scrolled{
+    animation: fade-in 1s ease-in;
+    animation-delay: 1s;
+}
+#icon_container3.scrolled{
+    animation: fade-in 1s ease-in;
+    animation-delay: 2s;
+} */
+
+/* #motor{
+    left: -150%;
+    grid-area: 1/1/3/1;
+    height: 70%;
+    top: 40%;
+    transition: 2s;
+    margin: auto;
+    position: absolute;
+}
+#fon{
+    height: 60%;
+    left: 70%;
+    top: 200%;
+    transition: 1s;
+    margin: auto;
+    position: absolute;
+}
+
+#delivery_text{
+    padding-top: 10%;
+    grid-area: 1/2/2/3;
+}
+#text_del_1{
+    font-size: 55px;
+    font-style: italic;
+}
+#text_del_2{
+    font-size: 85px;
+    font-weight: bold;
+}
+#text_del_3{
+    padding-bottom: 30px;
+}
+#delivery_text a{
+    padding: 20px 70px;
+    margin: 20px 10px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #eec300;
+    color: black;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+#delivery_text a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+#motor.scrolled{
+    left: 100px;
+}
+#fon.scrolled{
+    top: 50%;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+
+
+
+/* ----------------------------CONTACT------------------- */
+
+/* .contact{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)), url(img/guzva.jpg);
+    background-attachment: fixed;
+    height: 70vh;
+    background-size: cover;
+    color: wheat;
+}
+
+.contact div{
+    padding-top: 18%;
+}
+
+.contact div h2{
+    margin-bottom: 25px;
+}
+
+.contact div a{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: auto;
+    padding: 10px 20px;
+    width: 25vh;
+    transition-duration: 400ms;
+}
+
+.contact div a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+} */
+
+
+/* <!-- ----------------------------MAKE--------------------------- --> */
+
+
+/* #make_pizza{
+    padding-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    height: 90dvh;
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)), url(img/pozadina_za_pizzu.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#jelovnik{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+#jelovnik li{
+    margin: 0 20px;
+}
+#pizzaBtn{
+    color: rgb(255, 140, 178);
+}
+
+.okvir{
+    width: 50%;
+    margin: 30px 50% 2px 7%;
+    position: relative;
+}
+
+.okvir div{
+    margin: 2px;
+}
+
+.pizza{
+    text-align: left;
+    display: grid;
+    grid-template-areas:"div pizza";
+    grid-template-columns: 7fr 0fr;
+    transition: 2s;
+    margin: 0;
+    cursor: pointer;
+}
+
+.info, .info_pizza{
+    display: grid;
+    grid-template-areas: "naziv cena"
+                        "sastojci cena";
+    grid-template-columns: 7fr 1fr;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.pizza img{
+    height: 60dvh;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    left: 100%;
+    top: -5%;
+    padding-left: 5vh;
+}
+
+.naziv{
+    font-weight: bold;
+    grid-area: naziv;
+    color: rgb(255, 140, 178);
+}
+
+.sastojci{
+    font-style: italic;
+    grid-area: sastojci;
+    font-size: smaller;
+    color: rgb(211, 211, 211);
+}
+
+.info_pizza:hover + img{
+    animation: fade-in-pizza 250s;
+    opacity: 1;
+    cursor: pointer;
+}
+.info:hover + img{
+    animation: fade-in 2s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.info:hover, .info_pizza:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes fade-in-pizza {
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    0.5%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(3600deg);
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+#okvir_burger{
+    display: none;
+}
+#okvir_drink{
+    display: none;
+}
+#okvir_drink .info p{
+    padding: 10px 0;
+} */
+
+
+
+
+/* --------------------------about------------------------- */
+
+/* .about{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.about p{
+    padding-top: 50px;
+    width: 60%;
+    margin: auto;
+}
+
+.mreze{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.mreze a i{
+    color: black;
+    font-size: 20px;
+} */
+
+

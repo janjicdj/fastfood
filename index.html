@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="h_combo.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="our_menu.css">
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="a.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="header" class="header">
+        <nav class="nav">
+            <a href="#header"><img src="img/pizzaBurgerLogo.png" alt=""></a>
+            <div id="nav-links">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li class="padajuci"><a href="#make_pizza">OUR MENU</a>
+                        <ul>
+                            <li><a href="#make_pizza" onclick="pizza()">PIZZA</a></li>
+                            <li><a href="#make_pizza" onclick="burger()">BURGER</a></li>
+                            <li><a href="#make_pizza" onclick="drink()">DRINK</a></li>
+                            <li><a href="#hot_combo">HOT COMBO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </div>
+            <i id="menu-button" class='fas fa-align-justify' onclick="showMenu()"></i>
+        </nav>
+        <div id="pocetna">
+            <h1>PIZZA BURGER CLUB</h1>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Duis a consectetur velit, 
+                sed consectetur tortor. 
+                Phasellus dui ipsum, venenatis consequat gravida ac, 
+                scelerisque sit amet nulla. <br>
+                Proin molestie, augue nec pretium pretium, 
+                odio ex porta turpis, vel tempus nibh leo sit amet erat. 
+                Morbi quis elit et est dapibus euismod. <br> Vestibulum mollis, 
+                ante ac venenatis sollicitudin, leo nibh tristique sem, 
+                <br> sed dignissim justo orci eu tortor. 
+            </p>
+            <a href="#make_pizza">MAKE ORDER</a>
+        </div>
+    </section>
+
+    <!-- --------------------------hot combo------------------------ -->
+
+    <section id="hot_combo">
+        <h1> Our Hot Combo Items</h1>
+        <div id="container">
+            <div id="combo_1" class="combo">
+                <div class="text_combo">
+                    <p class="name">DOUBLE BEEF BURGER EXTRA</p>
+                    <p class="price">$12</p>
+                </div>
+                <img src="img/combo/combo_1.webp" alt="">
+            </div>
+            <div id="combo_2" class="combo">
+                <div class="text_combo">
+                    <p class="name">FAMILY <br> SATISFACTION</p>
+                    <p class="price">$15</p>
+                </div>
+                <img src="img/combo_2.jpg" alt="">
+            </div>            
+        </div>
+    </section>
+
+    <!-- ----------------------------OUR MENU--------------------------- -->
+    <section id="make_pizza">
+        <h1>Our Menu</h1>
+        <ul id="jelovnik">
+            <li id="pizzaBtn" onclick="pizza()">Pizza</li>
+            <li id="burgerBtn" onclick="burger()">Burger</li>
+            <li id="drinkBtn" onclick="drink()">Drink</li>
+        </ul>
+        <div id="okvir_pizza" class="okvir">
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">MARGHERITA</p>
+                    <p class="cena">$13</p>
+                    <p class="sastojci">mozzarella, tomato sauce, basil</p>
+                </div>
+                <img src="img/pizzas/margherita.png" alt="">
+            </div>
+
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">ALICCI</p>
+                    <p class="cena">$15</p>
+                    <p class="sastojci">anchovies, olives, cherry tomatoes, tomato sauce, pecorino</p>
+                </div>
+                <img src="img/pizzas/alicci.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">UOVA</p>
+                    <p class="cena">$16</p>
+                    <p class="sastojci">egg yolk, pancetta, pecorino, gorgonzola, mozzarella</p>
+                </div>
+                <img src="img/pizzas/uova.png">
+            </div>
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">PATATE</p>
+                    <p class="cena">$17</p>
+                    <p class="sastojci">potato, speck, mozzarella, smoked paprika</p>
+                </div>
+                <img src="img/pizzas/patate.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">POLIPETTI</p>
+                    <p class="cena">$13</p>
+                    <p class="sastojci">octopus, tomato sauce, oregano, hot pepper, roasted garlic</p>
+                </div>
+                <img src="img/pizzas/polipeti.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">ZUCCHINE</p>
+                    <p class="cena">$13</p>
+                    <p class="sastojci">zucchini, cherry tomatoes, rustic peperonata, lemon ricotta</p>
+                </div>
+                <img src="img/pizzas/zucchine.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info_pizza">
+                    <p class="naziv">SALSICCIA</p>
+                    <p class="cena">$17</p>
+                    <p class="sastojci">italian sausage, nduja, tomato sauce, ricotta</p>
+                </div>
+                <img src="img/pizzas/salsicia.png" alt="">
+            </div>
+        </div>
+        <!-- --------------------burger--------------------- -->
+        
+        <div id="okvir_burger" class="okvir">
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">DOUBLE BEEF BURGER</p>
+                    <p class="cena">$10</p>
+                    <p class="sastojci">two slices of 160gm black angus beef with melted cheese and site</p>
+                </div>
+                <img src="img/burgers/double_beef_burger.png" alt="">
+            </div>
+
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">GRILLED CHICKEN BURGER</p>
+                    <p class="cena">$8</p>
+                    <p class="sastojci">chicken breast mixed with spices for 24 hours grilled</p>
+                </div>
+                <img src="img/burgers/griled_chicken_burger.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">BEEF ARMENIA BURGER</p>
+                    <p class="cena">$11</p>
+                    <p class="sastojci">beef with eggplant, tahini, pomegranate molasses and roasted pine </p>
+                </div>
+                <img src="img/burgers/armenia.png">
+            </div>
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">CRISPY CHICKEN BURGER</p>
+                    <p class="cena">$12</p>
+                    <p class="sastojci">fried chicken breast mixed with the special site sauce</p>
+                </div>
+                <img src="img/burgers/crispy_chicken.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">BLACK TRUFFLE</p>
+                    <p class="cena">$15</p>
+                    <p class="sastojci">200 gm of black angus beef grilled with a hint of truffle</p>
+                </div>
+                <img src="img/burgers/black_turffle.png" alt="">
+            </div>
+        </div>
+
+        <!-- -----------------------drink------------------- -->
+
+        <div id="okvir_drink" class="okvir">
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">COCACOLA CLASSIC</p>
+                    <p class="cena">$3</p>
+                </div>
+                <img src="img/drinks/cocacola_clasic.png">
+            </div>
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">COCACOLA ZERO</p>
+                    <p class="cena">$3</p>
+                </div>
+                <img src="img/drinks/cocacola_zero.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">FANTA</p>
+                    <p class="cena">$2.5</p>
+                </div>
+                <img src="img/drinks/fanta.png" alt="">
+            </div>
+            <div class="pizza">
+                <div class="info">
+                    <p class="naziv">WATER</p>
+                    <p class="cena">$2</p>
+                </div>
+                <img src="img/drinks/voda_.png" alt="">
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!-- ---------------------USLUGE----------------------- -->
+
+    <!-- <section id="usluge" class="usluge">
+        <h1>Become Part Of Our Big Family</h1>
+        <p>
+            It is a long established fact that a reader 
+            will be distracted by the 
+        </p>
+
+        <div class="ponude">
+            <div id="standard" class="ponuda">
+                <h2>Standard</h2>
+                <p>
+                    For only 100 dollars a 
+                    month you can get lunch delivered 
+                    to your work, home or anywhere in the city
+                </p>
+                <img src="img/delivery/standard_delivery.png" alt="">
+            </div>
+            <div id="gold" class="ponuda">
+                <h2>Gold</h2>
+                <p>
+                    For only 150 dollars a month you can get breakfast 
+                    and lunch delivered to work, 
+                    home or anywhere in the city
+                </p>
+                <img src="img/delivery/burger_delivery.jpg" alt="">
+            </div>
+            <div id="premium" class="ponuda">
+                <h2>Premium</h2>
+                <p>
+                    For 1800 dollars you can get breakfast, 
+                    lunch and dinner delivered to your work,
+                    home or anywhere in the city for your whole 
+                    family.
+                </p>
+                <img src="img/delivery/premium_delivery.avif" alt="">
+            </div>
+        </div>
+        
+    </section> -->
+    <!-- ---------------------PROJEKTI----------------------- -->
+
+    <!-- <section id="projekti" class="projekti">
+        <h1>Our Projects</h1>
+        <p>Sed aliquet nisi ac turpis congue finibus.</p>
+        <div class="album">
+            <div class="hov">
+                <img src="img/p1.webp" alt="">
+                <div class="layer">
+                    <h3>ornare vitae suscipit sed</h3>
+                </div>
+            </div>
+            <div class="hov">
+                <img src="img/p2.jpg" alt="">
+                <div class="layer">
+                    <h3>ornare vitae suscipit sed</h3>
+                </div>
+            </div>
+            <div class="hov">
+                <img src="img/p3.jpg" alt="">
+                <div class="layer">
+                    <h3>ornare vitae suscipit sed</h3>
+                </div>
+            </div>
+        </div>
+        <div class="album">
+            <div class="hov">
+                <img src="img/p4.jpg" alt="">
+                <div class="layer">
+                    <h3>ornare vitae suscipit sed</h3>
+                </div>
+            </div>
+            <div class="hov">
+                <img src="img/p5.jpg" alt="">
+                <div class="layer">
+                    <h3>ornare vitae suscipit sed</h3>
+                </div>
+            </div>
+            <div class="hov">
+                <img src="img/p6.avif" alt="">
+                <div class="layer">
+                    <h3>ornare vitae suscipit sed</h3>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ------------------------DELIVERY--------------- -->
+
+    <section id="delivery">
+        <div id="content_delivery">
+            <div id="icons">
+                <div id="icon_container1" class="icon_container">
+                    <img id="icon_taste" src="img/delivery/taste1.png" alt="">
+                    <p>25 Minutes <br> Delivery</p>
+                </div>
+                <div id="icon_container2" class="icon_container">
+                    <img id="icon_clock" src="img/delivery/clock.png" alt="">
+                    <p>Best Taste <br> Guarantee</p>
+                </div>
+                <div id="icon_container3" class="icon_container">
+                    <img id="icon_shiping" src="img/delivery/freesh.png" alt="">
+                    <p>Free shipping <br> on first order</p>
+                </div>
+            </div>
+            <img id="motor" src="img/delivery/delivery_pizza_burger.png">
+            <div id="delivery_text">
+                <p id="text_del_1">We promise</p>
+                <p id="text_del_2">On time Delivery</p>
+                <p id="text_del_3">
+                    Need your food delivered to your door 
+                    at a pre-arranged time?
+                    <br> Let us know and we will be there
+                </p>
+                <a href="">ORDER NOW</a>
+            </div>
+            <img id="fon" src="img/delivery/fon2.webp" alt="">
+        </div>
+    </section>
+
+    <!-- -------------------KONTAKT--------------------- -->
+
+    <section id="contact" class="contact">
+        <div>
+            <h2>Maecenas in tellus quis odio viverra rhoncus. 
+                <br> Proin lectus odio, commodo nec purus consectetur, 
+                consectetur rhoncus leo.
+            </h2>
+            <a href="">Contact Us</a>
+        </div>
+    </section>
+
+
+    <!-- -----------------------ABOUT------------------------->
+
+    <section id="about" class="about">
+        <h3>About Us</h3>
+        <p>
+            Praesent ac mi ipsum. 
+            In pharetra magna vel ullamcorper volutpat. 
+            Duis imperdiet quam at ante ultricies, 
+            vel feugiat nisi fermentum. <br> Nam in sem scelerisque, 
+            faucibus eros ut, maximus odio. Aliquam ac diam semper, 
+            commodo risus gravida, lacinia massa. 
+            Sed ut mi dui.
+        </p>
+        <div class="mreze">
+            <a href="https://www.facebook.com/djordje.janjic.526"><i class='fab fa-facebook'></i></a>
+            <a href="https://www.instagram.com/"><i class='fab fa-instagram'></i></a>
+            <a href="https://twitter.com/i/flow/login"><i class='fab fa-twitter'></i></a>
+            <a href="https://rs.linkedin.com/"><i class='fab fa-linkedin-in'></i></a>          
+        </div>
+    </section>
+
+
+    <script>
+        var aa=document.getElementById("nav-links");
+
+        function showMenu(){
+            aa.style.right="0";
+        }
+
+        function hideMenu(){
+            aa.style.right="-350px";
+        }
+
+        document.addEventListener('scroll', ()=>{
+            console.log(scrollY);
+            const nav=document.querySelector('nav');
+            if(window.scrollY > 150){
+                nav.classList.add('scrolled');
+            }else{
+                nav.classList.remove('scrolled');
+            }
+        });
+        //     const combo1=document.querySelector('#combo_1');
+        //     if(window.scrollY > 250 && window.scrollY<1250){
+        //         combo1.classList.add('scrolled');
+        //     }else{
+        //         combo1.classList.remove('scrolled');
+        //     }
+        //     const combo2=document.querySelector('#combo_2');
+        //     if(window.scrollY > 250 && window.scrollY<1250){
+        //         combo2.classList.add('scrolled');
+        //     }else{
+        //         combo2.classList.remove('scrolled');
+        //     }
+        //     const motor=document.querySelector('#motor');
+        //     if(window.scrollY > 1770 && window.scrollY<2800){
+        //         motor.classList.add('scrolled');
+        //     }else{
+        //         motor.classList.remove('scrolled');
+        //     }
+        //     const fon=document.querySelector('#fon');
+        //     if(window.scrollY > 1770 && window.scrollY<2800){
+        //         fon.classList.add('scrolled');
+        //     }else{
+        //         fon.classList.remove('scrolled');
+        //     }
+
+
+        //     if(window.scrollY > 1770 && window.scrollY<2800){
+        //         document.querySelector('#icon_container1').classList.add('scrolled');
+        //     }else{
+        //         document.querySelector('#icon_container1').classList.remove('scrolled');
+        //     }
+        //     if(window.scrollY > 1770 && window.scrollY<2800){
+        //         document.querySelector('#icon_container2').classList.add('scrolled');
+        //     }else{
+        //         document.querySelector('#icon_container2').classList.remove('scrolled');
+        //     }
+        //     if(window.scrollY > 1770 && window.scrollY<2800){
+        //         document.querySelector('#icon_container3').classList.add('scrolled');
+        //     }else{
+        //         document.querySelector('#icon_container3').classList.remove('scrolled');
+        //     }
+        //     if(window.scrollY > 1770 && window.scrollY<2800){
+        //         document.querySelector('.icon_container').classList.add('scrolled');
+        //     }else{
+        //         document.querySelector('.icon_container').classList.remove('scrolled');
+        //     }
+        // });
+
+        var okvir_pizaa=document.getElementById("okvir_pizza");
+        var okvir_burger=document.getElementById("okvir_burger");
+        var okvir_drink=document.getElementById("okvir_drink");
+
+        function pizza(){
+            document.getElementById("pizzaBtn").style.color = "rgb(255, 140, 178)";
+            document.getElementById("burgerBtn").style.color = "white";
+            document.getElementById("drinkBtn").style.color = "white";
+
+            okvir_pizaa.style.display="block";
+            okvir_burger.style.display="none";
+            okvir_drink.style.display="none";
+        }
+        function burger(){
+            document.getElementById("pizzaBtn").style.color = "white";
+            document.getElementById("burgerBtn").style.color = "rgb(255, 140, 178)";
+            document.getElementById("drinkBtn").style.color = "white";
+
+            okvir_pizaa.style.display="none";
+            okvir_burger.style.display="block";
+            okvir_drink.style.display="none";
+        }
+        function drink(){
+            document.getElementById("pizzaBtn").style.color = "white";
+            document.getElementById("burgerBtn").style.color = "white";
+            document.getElementById("drinkBtn").style.color = "rgb(255, 140, 178)";
+
+            okvir_pizaa.style.display="none";
+            okvir_burger.style.display="none";
+            okvir_drink.style.display="block";
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

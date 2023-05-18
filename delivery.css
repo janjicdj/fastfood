@@ -1,0 +1,96 @@
+#delivery{
+    background-image: linear-gradient(rgba(73, 252, 94, 0.8),rgba(255, 103, 209, 0.7)), url(https://greenpak.supplies/wp-content/uploads/2021/04/Gourmet-Burger-Box-standard-Large.jpg);
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+#content_delivery{    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+#icons{
+    grid-area: 1/1/2/2;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+}
+
+#icons img{
+    height: 100%;    
+}
+
+.icon_container.scrolled{
+    animation: fade-in 2s;
+    opacity: 1;
+}
+
+#motor{
+    grid-area: 2/1/4/2;
+    transition: 2s;
+    width: 400px;
+    margin: auto;
+}
+#fon{
+    transition: 1s;
+    height: 250px;
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    z-index: 1;
+}
+
+#delivery_text{
+    grid-area: 1/2/4/3;
+    margin: auto;
+}
+#text_del_1{
+    font-size: 55px;
+    font-style: italic;
+}
+#text_del_2{
+    font-size: 85px;
+    font-weight: bold;
+}
+#text_del_3{
+    padding-bottom: 50px;
+}
+
+#delivery_text a{
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #eec300;
+    color: black;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-decoration: none;
+    padding: 20px 40px;
+}
+#delivery_text a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+#motor.scrolled{
+    left: 100px;
+}
+#fon.scrolled{
+    top: 50%;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

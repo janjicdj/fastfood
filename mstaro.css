@@ -1,0 +1,176 @@
+@media screen and (max-width: 700px){
+    
+    #pocetna h1{
+        font-size: 25px;
+        padding-top: 25vh;
+    }
+    #pocetna p{
+        width: 90vw;
+        font-size: 10px;
+    }
+    
+    #nav-links ul li{
+        display: block;
+        width: 70%;
+    }
+
+    nav.scrolled{
+        background-color: rgba(255, 0, 0, 0);
+    }
+
+    #menu-button{
+        transition: 2s;
+        border-radius: 50%;
+        margin: 12px;
+        color: white;
+    }
+    nav.scrolled #menu-button{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 30px;
+    }
+
+    nav.scrolled img{
+        width: 85px;
+    }
+
+    #nav-links{
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -350px;
+        text-align: left;
+        font-size: 35px;
+        z-index: 1;
+        width: 250px;
+    }
+
+    #nav-links ul{
+        padding: 30px;
+        border: 2px solid wheat;
+
+    }
+
+    #nav-links i{
+        display: block;
+        margin: 10px;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    nav .fas{
+        color: white;
+        display: block;
+        padding: 30px;
+        font-size: 36px;
+    }
+
+    /* ------services----- */
+
+    .padajuci ul{
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-align: left;
+        width: 70%;
+        /* margin: 35% 0 0 0; */
+        /* padding: 15% 0 0 0; */
+    }
+    .padajuci ul li{
+        width: 30%;
+    }
+
+    /* #nav-links ul li::after{
+        display: none;
+    }
+
+    #nav-links ul li a::after{
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: rgb(140, 140, 255);
+        display: block;
+        margin: auto;
+        transition: 0.4s;
+    }
+    
+    #nav-links ul li a:hover::after{
+        width: 100%;
+    } */
+
+
+
+
+    /* ------------------usluge------------------ */
+    .usluge{
+        width: 80%;
+    }
+    .ponude{
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        margin: auto;
+        height: auto;
+        justify-content: space-between;
+    }
+    .ponuda{
+        width: 90%;
+        margin: 20px 0px;
+        padding-bottom: 20px;
+    }
+    /* -------------make------------- */
+
+    #make_pizza{
+        display: none;
+    }
+
+    /* ----------------------projekti-------------------- */
+
+    .album{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    
+    .hov{
+        width: 100%;
+        margin-top: 15%;
+    }
+
+    .hov img{
+        height: 100%;
+    }
+
+
+    /* -----------------------contact---------------------- */
+
+    .contact{
+        height: 50vh;
+    }
+    .contact h2{
+        width: 90%;
+        font-size: 15px;
+        margin: auto;
+        padding-top: 120px;
+    }
+
+    /* ----------------------about----------------------- */
+
+    .about p{
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .mreze a i{
+        color: black;
+        font-size: 25px;
+    }
+
+}
