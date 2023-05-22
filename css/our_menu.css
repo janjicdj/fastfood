@@ -2,7 +2,7 @@
     padding: 100px 0;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)), url(img/pozadina_za_pizzu.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.5)), url(../img/pozadina_za_pizzu.jpg);
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -23,7 +23,7 @@
 }
 
 .okvir{
-    width: 500px;
+    width: 550px;
     text-align: left;
     margin: auto;
     position: relative;
@@ -35,14 +35,14 @@
     grid-template-areas:"div pizza";
     grid-template-columns: 7fr 0fr;
     transition: 2s;
-    cursor: pointer;
+    cursor: default;
 }
 
 .info, .info_pizza{
     display: grid;
     grid-template-areas: "naziv cena"
                         "sastojci cena";
-    grid-template-columns: 7fr 1fr;
+    grid-template-columns: 5fr 1fr;
     transition: 0.3s;
 }
 
@@ -69,7 +69,33 @@
     font-size: smaller;
     color: rgb(211, 211, 211);
 }
+.cena button{
+    background-color: rgb(210, 29, 29);
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    opacity: 0;
+    position: absolute;
+    left: 35px;
+    top: -10px;
+}
 
+.cena button:hover{
+    background-color: rgb(172, 9, 9);
+}
+.cena{
+    position: relative;
+}
+
+
+.info_pizza:hover .cena button{
+    opacity: 1;
+}
+.info:hover .cena button{
+    opacity: 1;
+}
 .info_pizza:hover + img{
     animation: fade-in-pizza 250s;
     opacity: 1;

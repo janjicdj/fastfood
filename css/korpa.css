@@ -1,0 +1,100 @@
+.proba{
+    width: 30%;
+    padding-top: 30px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.0),rgba(255, 255, 255, 0.0)), url(../img/cart_back.avif);
+    background-size: cover;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    position: fixed;
+    z-index: 15;
+    display: none;
+    height: 72%;
+}
+.korpa_footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+.total{
+    font-size: 20px;
+}
+.order_button{
+    background-color: #eec300;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.order_button:hover{
+    background-color: aliceblue;
+}
+#korpa{
+    height: 77%;
+    overflow-y: scroll;
+    width: 70%;
+}
+.exit_cart{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    color: white;
+    padding: 3px 10px;
+    background-color: rgb(165, 42, 73);
+    cursor: pointer;
+}
+.delete_cart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 3px 10px;
+    background-color: rgb(165, 42, 73);
+    cursor: pointer;
+}
+.exit_cart:hover, .delete_cart:hover{
+    background-color: rgb(97, 23, 42);
+}
+.tabela{
+    width: 70%;
+    display: flex;
+    background-color: rgb(192, 107, 135);
+    color: white;
+    font-weight: bold;
+    padding: 20px 10px 15px 10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 10fr 1fr 1fr 1fr 1fr;
+}
+.product_t{
+    grid-area: 1/1/2/2;
+}
+.price_t{
+    grid-area: 1/3/2/4;
+}
+.qunantity_t{
+    grid-area: 1/5/2/6;
+}
+.glavni_k{
+    width: 70%;
+    margin: 3px auto;
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    padding: 10px;
+    background-color: rgb(126, 214, 147);
+}
+
+.naziv_k{
+    grid-area: 1/1/2/2;
+}
+.sastojci_k{
+    grid-area: 2/1/3/2;
+    font-size: 9px;
+}
+.cena_k{
+    grid-area: 1/3/3/4;
+    margin: auto;
+}
+.kolicina_k{
+    grid-area: 1/5/3/6;
+    margin: auto;
+}

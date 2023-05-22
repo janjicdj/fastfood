@@ -81,6 +81,17 @@
         left: 90%;
         top: 0px;
     }
+    .tabela{
+        width: 80vh;
+        font-weight: 200;
+        font-size: 11px;
+    }
+    .naziv_k{
+        font-size: 13px;
+    }
+    .sastojci_k{
+        font-size: 8px;
+    }
 }
 @media screen and (max-width: 1050px) {
     .okvir{
@@ -101,6 +112,7 @@
         font-size: 10px;
     }
 
+
 }
 @media screen and (max-width: 950px) {
     .okvir{
@@ -115,6 +127,17 @@
     .contact{
         padding: 100px;
         font-size: 11px;
+    }
+    #opis{
+        font-size: 9px !important;
+    }
+    .mreze a i{
+        font-size: 20px;
+        padding: 0px 10px !important;
+    }
+    #copy_right{
+        padding: 15px !important;
+        font-size: 9px;
     }
 
 }
@@ -143,6 +166,9 @@
     }
     .text_combo{
         font-size: 55px;
+    }
+    .kutija{
+        width: 32% !important;
     }   
 }
 @media screen and (max-width: 800px) {
@@ -154,6 +180,7 @@
     .info_pizza:hover + img{
         opacity: 0.5;
     }
+
 
     @keyframes fade-in-pizza {
         0%{
@@ -182,6 +209,36 @@
     #pocetna p{
         font-size: 13px;
         padding: 40px;
+    }
+
+    #quick_links{
+        display: none;
+    }
+
+    .row2{
+        display: grid !important;
+        grid-template-columns: 1f 1f !important;
+        grid-template-rows: 1f 1fr !important;
+    }
+    .kutija{
+        width: 100% !important;
+        margin: 20px;
+    }
+    .kutija_location{
+        grid-area: 1/1/2/3 !important;
+    }
+    .kutija_contact{
+        grid-area: 2/1/3/2 !important;
+    }
+    .kutija_service{
+        grid-area: 2/2/3/3 !important;
+    }
+    #opis{
+        padding-right: 5px !important;
+    }
+    .mreze a i{
+        font-size: 20px !important;
+        padding: 0px 5px;
     }
 
 }
@@ -240,6 +297,61 @@
     #okvir_pizza .pizza img{
         left: 40%;
     }
+    .proba{
+        width: 100%;
+        bottom: 0;
+        top: auto;
+        height: fit-content;
+    }
+    .tabela{
+        width: 70%;
+        display: flex;
+        background-color: rgb(192, 107, 135);
+        color: white;
+        font-weight: bold;
+        padding: 15px 10px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 4fr 10fr 1fr 1fr 1fr 1fr;
+    }
+    .product_t{
+        grid-area: 1/1/2/2;
+    }
+    .price_t{
+        grid-area: 1/3/2/4;
+    }
+    .qunantity_t{
+        grid-area: 1/5/2/6;
+    }
+    .glavni_k{
+        width: 70%;
+        margin: 3px auto;
+        display: grid;
+        grid-template-columns: 7fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: min-content min-content;
+        padding: 10px;
+        background-color: rgb(126, 214, 147);
+    }
+    
+    .naziv_k{
+        grid-area: 1/1/2/2;
+        font-size: 11px;
+    }
+    .sastojci_k{
+        grid-area: 2/1/3/2;
+        font-size: 9px;
+        display: none;
+    }
+    .cena_k{
+        grid-area: 1/3/3/4;
+        font-size: 11px;
+        margin: auto;
+    }
+    .kolicina_k{
+        grid-area: 1/5/3/6;
+        margin: auto;
+        font-size: 11px;
+    }
 }
 @media screen and (max-width: 630px) {
     #hot_combo h1{
@@ -291,14 +403,14 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        right: -300px;
+        right: -250px;
         text-align: left;
         z-index: 10;
         width: 200px;
         transition: 1s;
     }
     #nav-links ul li a{
-        font-size: 23px;
+        font-size: 16px;
         padding: 5px;
     }
     #nav-links ul li ul li a{
@@ -348,8 +460,15 @@
         padding: 9px 32px;
     }
     .header{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)), url(img/burgerCrop.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)), url(../img/burgerCrop.jpg);
     }
+    .mreze a i{
+        padding: 0px 5px !important;
+    }
+    #img_logo h2{
+        font-size: 15px !important;
+    }
+
 }
 @media screen and (max-width: 560px) {
     #okvir_pizza .pizza img{
@@ -364,6 +483,41 @@
     #make_pizza h1{
         font-size: 40px;
     }
+    .cena button{
+        padding: 7px;
+        position: absolute;
+        left: 25px;
+        top: -10px;
+    }
+    .row iframe{
+        width: 20%;
+    }
+    .row2{
+        grid-template-columns: 1f !important;
+        grid-template-rows: 1fr 1fr 1fr !important;
+    }
+    .kutija{
+        margin: 5px !important;
+    }
+    .kutija_location{
+        grid-area: 1/1/2/2 !important;
+    }
+    .kutija_contact{
+        grid-area: 2/1/3/2 !important;
+    }
+    .kutija_service{
+        grid-area: 3/1/4/2 !important;
+    }
+    .row{
+        flex-direction: column !important;
+        padding: 20px 5%;
+    }
+    iframe{
+        width: 100% !important;
+    }
+    #img_logo img{
+        display: none !important;
+    }
 }
 @media screen and (max-width: 475px) {
     .text_combo{
@@ -376,7 +530,7 @@
         left: 20%;
     }
     #okvir_drink .pizza img{
-        left: 10%;
+        left: 50%;
     }
     #hot_combo h1{
         font-size: 35px;
@@ -385,8 +539,8 @@
         width: 90%;
     }
     #okvir_drink {
-        width: 50%;
-        left: 1%;
+        width: 80%;
+        left: 0;
     }
     #make_pizza{
         overflow: hidden;

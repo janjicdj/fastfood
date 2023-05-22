@@ -34,12 +34,10 @@
 
 #motor{
     grid-area: 2/1/4/2;
-    transition: 2s;
     width: 400px;
     margin: auto;
 }
 #fon{
-    transition: 1s;
     height: 250px;
     position: absolute;
     right: -100px;
@@ -77,13 +75,6 @@
 }
 #delivery_text a:hover{
     background-color: rgb(255, 255, 255);
-}
-
-#motor.scrolled{
-    left: 100px;
-}
-#fon.scrolled{
-    top: 50%;
 }
 
 @keyframes fade-in{

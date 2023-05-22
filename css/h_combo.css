@@ -1,6 +1,6 @@
 #hot_combo{
     text-align: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url(img/pozadina_za_hotcombo.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url(../img/pozadina_za_hotcombo.jpg);
     background-size: cover;
     overflow: hidden;
     padding: 100px 0;

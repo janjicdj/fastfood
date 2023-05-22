@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="s.css">
-    <link rel="stylesheet" href="h_combo.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="our_menu.css">
-    <link rel="stylesheet" href="delivery.css">
-    <link rel="stylesheet" href="media.css">
-    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/h_combo.css">
+    <link rel="stylesheet" href="css/our_menu.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="css/mediastyle.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <title>Document</title>
+    <title>Pizza Burger Club</title>
 </head>
 <body>
     <section id="header" class="header">
@@ -36,8 +38,9 @@
                             <li><a href="#hot_combo">HOT COMBO</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#delivery">DELIVERY</a></li>
+                    <li><a href="#footer">ABOUT</a></li>
+                    <li><a href="#make_pizza" onclick="showCart()">CART <span id="cart_qu"></span></a></li>
                 </ul>
             </div>
             <i id="menu-button" class='fas fa-align-justify' onclick="showMenu()"></i>
@@ -62,9 +65,9 @@
 
     <!-- --------------------------hot combo------------------------ -->
 
-    <section id="hot_combo">
+    <section id="hot_combo" class="reveal fade-bottom">
         <h1> Our Hot Combo Items</h1>
-        <div id="container">
+        <div class="reveal" id="container">
             <div id="combo_1" class="combo">
                 <div class="text_combo">
                     <p class="name">DOUBLE BEEF BURGER EXTRA</p>
@@ -91,59 +94,87 @@
             <li id="drinkBtn" onclick="drink()">Drink</li>
         </ul>
         <div id="okvir_pizza" class="okvir">
-            <div class="pizza">
-                <div class="info_pizza">
-                    <p class="naziv">MARGHERITA</p>
-                    <p class="cena">$13</p>
-                    <p class="sastojci">mozzarella, tomato sauce, basil</p>
+            <div class="pizza" id="margherita">
+                <div class="info_pizza" >
+                    <p id="margherita_naziv" class="naziv">MARGHERITA</p>
+                    <p id="margherita_cena" class="cena">$13 
+                        <button  id="add" onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button>
+                    </p>
+                    <p id="margherita_sastojci" class="sastojci">mozzarella, tomato sauce, basil</p>
                 </div>
-                <img src="img/pizzas/margherita.png" alt="">
+                <img id="margherita_img" src="img/pizzas/margherita.png" alt="">
             </div>
 
             <div class="pizza">
-                <div class="info_pizza">
+                <div class="info_pizza" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">ALICCI</p>
-                    <p class="cena">$15</p>
+                    <p class="cena">$15
+                        <button id="add" onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">anchovies, olives, cherry tomatoes, tomato sauce, pecorino</p>
                 </div>
                 <img src="img/pizzas/alicci.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info_pizza">
+                <div class="info_pizza" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">UOVA</p>
-                    <p class="cena">$16</p>
+                    <p class="cena">$16
+                        <button id="add" onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">egg yolk, pancetta, pecorino, gorgonzola, mozzarella</p>
                 </div>
                 <img src="img/pizzas/uova.png">
             </div>
             <div class="pizza">
-                <div class="info_pizza">
+                <div class="info_pizza" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">PATATE</p>
-                    <p class="cena">$17</p>
+                    <p class="cena">$17
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">potato, speck, mozzarella, smoked paprika</p>
                 </div>
                 <img src="img/pizzas/patate.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info_pizza">
+                <div class="info_pizza" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">POLIPETTI</p>
-                    <p class="cena">$13</p>
+                    <p class="cena">$13
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">octopus, tomato sauce, oregano, hot pepper, roasted garlic</p>
                 </div>
                 <img src="img/pizzas/polipeti.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info_pizza">
+                <div class="info_pizza" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">ZUCCHINE</p>
-                    <p class="cena">$13</p>
+                    <p class="cena">$13
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">zucchini, cherry tomatoes, rustic peperonata, lemon ricotta</p>
                 </div>
                 <img src="img/pizzas/zucchine.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info_pizza">
+                <div class="info_pizza" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">SALSICCIA</p>
-                    <p class="cena">$17</p>
+                    <p class="cena">$17
+                        <button id="add" onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">italian sausage, nduja, tomato sauce, ricotta</p>
                 </div>
                 <img src="img/pizzas/salsicia.png" alt="">
@@ -153,42 +184,62 @@
         
         <div id="okvir_burger" class="okvir">
             <div class="pizza">
-                <div class="info">
+                <div class="info" id="double-beef-burger">
                     <p class="naziv">DOUBLE BEEF BURGER</p>
-                    <p class="cena">$10</p>
+                    <p class="cena">$10
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">two slices of 160gm black angus beef with melted cheese and site</p>
                 </div>
-                <img src="img/burgers/double_beef_burger.png" alt="">
+                <img id="double-beef-burger-img" src="img/burgers/double_beef_burger.png" alt="">
             </div>
 
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">GRILLED CHICKEN BURGER</p>
-                    <p class="cena">$8</p>
+                    <p class="cena">$8
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">chicken breast mixed with spices for 24 hours grilled</p>
                 </div>
                 <img src="img/burgers/griled_chicken_burger.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">BEEF ARMENIA BURGER</p>
-                    <p class="cena">$11</p>
+                    <p class="cena">$11
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">beef with eggplant, tahini, pomegranate molasses and roasted pine </p>
                 </div>
                 <img src="img/burgers/armenia.png">
             </div>
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">CRISPY CHICKEN BURGER</p>
-                    <p class="cena">$12</p>
+                    <p class="cena">$12
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">fried chicken breast mixed with the special site sauce</p>
                 </div>
                 <img src="img/burgers/crispy_chicken.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">BLACK TRUFFLE</p>
-                    <p class="cena">$15</p>
+                    <p class="cena">$15
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                     <p class="sastojci">200 gm of black angus beef grilled with a hint of truffle</p>
                 </div>
                 <img src="img/burgers/black_turffle.png" alt="">
@@ -199,30 +250,46 @@
 
         <div id="okvir_drink" class="okvir">
             <div class="pizza">
-                <div class="info">
+                <div class="info" id="cocacola">
                     <p class="naziv">COCACOLA CLASSIC</p>
-                    <p class="cena">$3</p>
+                    <p class="cena">$3
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                 </div>
-                <img src="img/drinks/cocacola_clasic.png">
+                <img id="cocacola-img" src="img/drinks/cocacola_clasic.png">
             </div>
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">COCACOLA ZERO</p>
-                    <p class="cena">$3</p>
+                    <p class="cena">$3
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                 </div>
                 <img src="img/drinks/cocacola_zero.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">FANTA</p>
-                    <p class="cena">$2.5</p>
+                    <p class="cena">$2
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                 </div>
                 <img src="img/drinks/fanta.png" alt="">
             </div>
             <div class="pizza">
-                <div class="info">
+                <div class="info" onmouseout="out()" onmouseover="over()">
                     <p class="naziv">WATER</p>
-                    <p class="cena">$2</p>
+                    <p class="cena">$2
+                        <button onclick="addItem(this.parentElement.parentElement.parentElement)">
+                            <i class='fas fa-shopping-cart'></i>
+                        </button> 
+                    </p>
                 </div>
                 <img src="img/drinks/voda_.png" alt="">
             </div>
@@ -232,98 +299,11 @@
 
     </section>
 
-    <!-- ---------------------USLUGE----------------------- -->
-
-    <!-- <section id="usluge" class="usluge">
-        <h1>Become Part Of Our Big Family</h1>
-        <p>
-            It is a long established fact that a reader 
-            will be distracted by the 
-        </p>
-
-        <div class="ponude">
-            <div id="standard" class="ponuda">
-                <h2>Standard</h2>
-                <p>
-                    For only 100 dollars a 
-                    month you can get lunch delivered 
-                    to your work, home or anywhere in the city
-                </p>
-                <img src="img/delivery/standard_delivery.png" alt="">
-            </div>
-            <div id="gold" class="ponuda">
-                <h2>Gold</h2>
-                <p>
-                    For only 150 dollars a month you can get breakfast 
-                    and lunch delivered to work, 
-                    home or anywhere in the city
-                </p>
-                <img src="img/delivery/burger_delivery.jpg" alt="">
-            </div>
-            <div id="premium" class="ponuda">
-                <h2>Premium</h2>
-                <p>
-                    For 1800 dollars you can get breakfast, 
-                    lunch and dinner delivered to your work,
-                    home or anywhere in the city for your whole 
-                    family.
-                </p>
-                <img src="img/delivery/premium_delivery.avif" alt="">
-            </div>
-        </div>
-        
-    </section> -->
-    <!-- ---------------------PROJEKTI----------------------- -->
-
-    <!-- <section id="projekti" class="projekti">
-        <h1>Our Projects</h1>
-        <p>Sed aliquet nisi ac turpis congue finibus.</p>
-        <div class="album">
-            <div class="hov">
-                <img src="img/p1.webp" alt="">
-                <div class="layer">
-                    <h3>ornare vitae suscipit sed</h3>
-                </div>
-            </div>
-            <div class="hov">
-                <img src="img/p2.jpg" alt="">
-                <div class="layer">
-                    <h3>ornare vitae suscipit sed</h3>
-                </div>
-            </div>
-            <div class="hov">
-                <img src="img/p3.jpg" alt="">
-                <div class="layer">
-                    <h3>ornare vitae suscipit sed</h3>
-                </div>
-            </div>
-        </div>
-        <div class="album">
-            <div class="hov">
-                <img src="img/p4.jpg" alt="">
-                <div class="layer">
-                    <h3>ornare vitae suscipit sed</h3>
-                </div>
-            </div>
-            <div class="hov">
-                <img src="img/p5.jpg" alt="">
-                <div class="layer">
-                    <h3>ornare vitae suscipit sed</h3>
-                </div>
-            </div>
-            <div class="hov">
-                <img src="img/p6.avif" alt="">
-                <div class="layer">
-                    <h3>ornare vitae suscipit sed</h3>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <!-- ------------------------DELIVERY--------------- -->
 
     <section id="delivery">
         <div id="content_delivery">
-            <div id="icons">
+            <div id="icons" class="reveal fade-left">
                 <div id="icon_container1" class="icon_container">
                     <img id="icon_taste" src="img/delivery/taste1.png" alt="">
                     <p>25 Minutes <br> Delivery</p>
@@ -337,57 +317,217 @@
                     <p>Free shipping <br> on first order</p>
                 </div>
             </div>
-            <img id="motor" src="img/delivery/delivery_pizza_burger.png">
-            <div id="delivery_text">
+            <img class="reveal fade-left" id="motor" src="img/delivery/delivery_pizza_burger.png">
+            <div id="delivery_text" class="reveal fade-bottom">
                 <p id="text_del_1">We promise</p>
                 <p id="text_del_2">On time Delivery</p>
                 <p id="text_del_3">
                     Need your food delivered to your door 
-                    at a pre-arranged time?
+                    at a pre-arranged time
                     <br> Let us know and we will be there
                 </p>
-                <a href="">ORDER NOW</a>
+                <a href="#make_pizza">ORDER NOW</a>
             </div>
-            <img id="fon" src="img/delivery/fon2.webp" alt="">
+            <img class="reveal fade-bottom" id="fon" src="img/delivery/fon2.webp" alt="">
         </div>
     </section>
 
-    <!-- -------------------KONTAKT--------------------- -->
-
-    <section id="contact" class="contact">
-        <div>
-            <h2>Maecenas in tellus quis odio viverra rhoncus. 
-                <br> Proin lectus odio, commodo nec purus consectetur, 
-                consectetur rhoncus leo.
-            </h2>
-            <a href="">Contact Us</a>
+    <!-- ------------------------Contact,About,Maps-------------- -->
+    <section id="footer">
+        <div class="row">
+            <div class="cone">
+                <div id="img_logo">
+                    <img src="img/pizzaBurgerLogo.png" width="60px" alt="">
+                    <h2> Pizza Burger Club</h2>
+                </div>
+                <p id="opis"> 
+                    Fast Food Sites provides online food ordering 
+                    and delivery solutions to Takeaway, Fast Food
+                     and restaurants. Fast Food Sites is owned and 
+                    operated by Informsit Ltd.
+                </p>
+                <div class="mreze">
+                    <a href="https://www.facebook.com/djordje.janjic.526"><i class='fab fa-facebook'></i></a>
+                    <a href="https://www.instagram.com/"><i class='fab fa-instagram'></i></a>
+                    <a href="https://twitter.com/i/flow/login"><i class='fab fa-twitter'></i></a>
+                    <a href="https://rs.linkedin.com/"><i class='fab fa-linkedin-in'></i></a>          
+                </div>
+            </div>
+            <div class="cone" id="quick_links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#hot_combo">Hot Combo</a></li>
+                    <li><a href="#make_pizza">Our Menu</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                </ul>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22572.048877476514!2d20.522966995043948!3d44.99434331730804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a88fe09119beb%3A0x8b16fddc7527d621!2sIronWorks!5e0!3m2!1sen!2srs!4v1684499073281!5m2!1sen!2srs"  class="cone map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <div  class="row row2">
+            <div class="kutija kutija_contact">
+                <i class="material-icons">mail_outline</i>
+                <h3>Enquiries</h3>
+                <p id="contact" onclick="sendEmail()">Contact Us</p>
+            </div>
+            <div class="kutija kutija_service">
+                <i class='fas fa-phone-alt'></i>
+                <h3>Suport Service</h3>
+                <p>+381 60 43 44 800</p>
+            </div>
+            <div class="kutija kutija_location">
+                <i class="material-icons">location_on</i>
+                <h3>Location</h3>
+                <p>Venture Centre, UWSP Science Park, Coventry</p>
+            </div>
+        </div>
+        <p id="copy_right">Copyright ©2023 Janjić Đorđe. All Rights Reserved.</p>
     </section>
 
 
-    <!-- -----------------------ABOUT------------------------->
-
-    <section id="about" class="about">
-        <h3>About Us</h3>
-        <p>
-            Praesent ac mi ipsum. 
-            In pharetra magna vel ullamcorper volutpat. 
-            Duis imperdiet quam at ante ultricies, 
-            vel feugiat nisi fermentum. <br> Nam in sem scelerisque, 
-            faucibus eros ut, maximus odio. Aliquam ac diam semper, 
-            commodo risus gravida, lacinia massa. 
-            Sed ut mi dui.
-        </p>
-        <div class="mreze">
-            <a href="https://www.facebook.com/djordje.janjic.526"><i class='fab fa-facebook'></i></a>
-            <a href="https://www.instagram.com/"><i class='fab fa-instagram'></i></a>
-            <a href="https://twitter.com/i/flow/login"><i class='fab fa-twitter'></i></a>
-            <a href="https://rs.linkedin.com/"><i class='fab fa-linkedin-in'></i></a>          
+    <section class="proba" id="proba">
+        <p class="delete_cart" onclick="deleteCart()">X</p>
+        <p class="exit_cart" onclick="hideCart()">_</p>
+        <div class="tabela">
+            <p class="product_t">Product</p>
+            <p class="price_t">Price</p>
+            <p class="qunantity_t">Qunantity</p>
         </div>
+        <div id="korpa">
+
+        </div>
+        <div class="korpa_footer">
+            <p id="total" class="total">Total: 0$</p>
+            <p class="order_button" onclick="sendOrder()">Order</p>
+        </div>
+
     </section>
 
 
     <script>
+        // ******************Posalji mail-Contact Us******************
+        function sendEmail(){
+            var email = "janjicdj@gmail.com";
+            var subject = "Misljenje o sajtu";
+            var msgBody = "";
+            window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
+        }
+
+        // ****************Prikazi Korpu*******************
+        const cart=document.getElementById('proba');
+        
+        function showCart(){
+            cart.style.display="block";
+            hideMenu();
+        }
+        function hideCart(){
+            cart.style.display="none";
+        }
+
+        function deleteCart(){
+            nizPodataka = [];
+            if (confirm("Are you sure you want to delete the order?") == true) {
+                text = "Deleted!";
+                document.getElementById('korpa').innerHTML='';
+                hideCart();
+                kolicina_u=0;
+                document.getElementById('cart_qu').style.display='none';
+                document.getElementById('cart_qu').style.display='none';
+                document.getElementById('total').innerHTML="Total 0$";
+            }else {
+                text = "Continue ordering";
+            }
+        }
+
+        // *****************Dodaj Item u korpu**************
+        var nizPodataka = [];
+        var ukupno=0;
+        var kolicina_u=0;
+        var klik_nu=0;
+        const addItem = (proizvod) =>{
+            alert("The item has been added to the cart");
+            if (klik_nu==0) {
+                showCart();
+            }
+            klik_nu=1;
+            let check=true;
+            for(let i=0; i<nizPodataka.length; i++){
+                if(nizPodataka[i].naziv==proizvod.children[0].children[0].innerText){
+                    nizPodataka[i].kolicina += 1;
+                    check=false;
+                }
+            }
+            if (check) {
+                let obj = {};
+                const niz = proizvod.children[0].children;
+                obj['naziv'] = niz[0].innerText;
+                obj['cena'] = niz[1].innerText;
+                if (niz.length>2) {
+                    obj['sastojci'] = niz[2].innerText;
+                }
+                obj['slika'] = proizvod.children[1].baseURI;
+                obj['kolicina']=1;
+                nizPodataka.push(obj)
+            }
+            let cartSection = document.getElementById('korpa');
+            cartSection.innerHTML = '';
+            nizPodataka.forEach(obj=>{
+                const glavniDiv = document.createElement('div');
+                const nazivDiv = document.createElement('div');
+                const cenaDiv = document.createElement('div');
+                const sastojciDiv = document.createElement('div');
+                const kolicinaDiv = document.createElement('div');
+                nazivDiv.innerText = obj.naziv;
+                cenaDiv.innerText = obj.cena;
+                sastojciDiv.innerText = obj.sastojci;
+                kolicinaDiv.innerText = obj.kolicina;
+                glavniDiv.appendChild(nazivDiv).classList.add("naziv_k");
+                glavniDiv.appendChild(cenaDiv).classList.add("cena_k");
+                glavniDiv.appendChild(sastojciDiv).classList.add("sastojci_k");
+                glavniDiv.appendChild(kolicinaDiv).classList.add("kolicina_k");
+                cartSection.appendChild(glavniDiv).classList.add("glavni_k");
+            });
+
+            // -------Osvezi total price--------
+            ukupno=0;
+
+            for(let i=0; i<nizPodataka.length; i++){
+                ukupno+=parseInt(nizPodataka[i].cena.slice(1, nizPodataka[i].cena.length))*parseInt(nizPodataka[i].kolicina);
+            }
+
+            let total=document.getElementById('total');
+            total.innerHTML="Total "+ukupno+"$";
+
+
+            kolicina_u+=1;
+            document.getElementById('cart_qu').innerHTML=kolicina_u;
+            document.getElementById('cart_qu').style.display='block';
+        }
+
+        // ***************Posalji porudzbinu************
+        function sendOrder(){
+            for(let i=0; i<nizPodataka.length; i++){
+                console.log(nizPodataka[i].naziv);
+                console.log(nizPodataka[i].cena);
+                console.log(nizPodataka[i].sastojci);
+                console.log(nizPodataka[i].kolicina);
+                console.log("----------------------");
+            }
+            nizPodataka = [];
+            alert("Your order has been saved");
+            document.getElementById('korpa').innerHTML='';
+            hideCart();
+            document.getElementById('total').innerHTML='Total: 0$';
+            document.getElementById('cart_qu').style.display='none';
+            kolicina_u=0;
+        }
+
+
+
+        // -------------side menu with scroll------------
+
+        window.addEventListener("scroll", reveal);
+
         var aa=document.getElementById("nav-links");
 
         function showMenu(){
@@ -399,7 +539,7 @@
         }
 
         document.addEventListener('scroll', ()=>{
-            console.log(scrollY);
+            // console.log(scrollY);
             const nav=document.querySelector('nav');
             if(window.scrollY > 150){
                 nav.classList.add('scrolled');
@@ -407,53 +547,8 @@
                 nav.classList.remove('scrolled');
             }
         });
-        //     const combo1=document.querySelector('#combo_1');
-        //     if(window.scrollY > 250 && window.scrollY<1250){
-        //         combo1.classList.add('scrolled');
-        //     }else{
-        //         combo1.classList.remove('scrolled');
-        //     }
-        //     const combo2=document.querySelector('#combo_2');
-        //     if(window.scrollY > 250 && window.scrollY<1250){
-        //         combo2.classList.add('scrolled');
-        //     }else{
-        //         combo2.classList.remove('scrolled');
-        //     }
-        //     const motor=document.querySelector('#motor');
-        //     if(window.scrollY > 1770 && window.scrollY<2800){
-        //         motor.classList.add('scrolled');
-        //     }else{
-        //         motor.classList.remove('scrolled');
-        //     }
-        //     const fon=document.querySelector('#fon');
-        //     if(window.scrollY > 1770 && window.scrollY<2800){
-        //         fon.classList.add('scrolled');
-        //     }else{
-        //         fon.classList.remove('scrolled');
-        //     }
-
-
-        //     if(window.scrollY > 1770 && window.scrollY<2800){
-        //         document.querySelector('#icon_container1').classList.add('scrolled');
-        //     }else{
-        //         document.querySelector('#icon_container1').classList.remove('scrolled');
-        //     }
-        //     if(window.scrollY > 1770 && window.scrollY<2800){
-        //         document.querySelector('#icon_container2').classList.add('scrolled');
-        //     }else{
-        //         document.querySelector('#icon_container2').classList.remove('scrolled');
-        //     }
-        //     if(window.scrollY > 1770 && window.scrollY<2800){
-        //         document.querySelector('#icon_container3').classList.add('scrolled');
-        //     }else{
-        //         document.querySelector('#icon_container3').classList.remove('scrolled');
-        //     }
-        //     if(window.scrollY > 1770 && window.scrollY<2800){
-        //         document.querySelector('.icon_container').classList.add('scrolled');
-        //     }else{
-        //         document.querySelector('.icon_container').classList.remove('scrolled');
-        //     }
-        // });
+        
+        // ------------------our menu--------------------
 
         var okvir_pizaa=document.getElementById("okvir_pizza");
         var okvir_burger=document.getElementById("okvir_burger");
@@ -487,7 +582,67 @@
             okvir_drink.style.display="block";
         }
 
+        // -----------------fade ins------------------
 
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }   
+        }
+
+        window.addEventListener("scroll", reveal);
+
+
+
+
+
+
+        // ******************Over animation on product*********
+        
+
+        function over() {
+            // ---------------------pizaa-------------------
+            document.getElementById("margherita").style.backgroundColor="rgba(0, 0, 0, 0)";
+            document.getElementById("margherita_img").style.opacity="0";
+            document.getElementById("margherita_img").style.animation="none";
+            // -----------------------burger-------------------
+            document.getElementById("double-beef-burger").style.backgroundColor="rgba(0, 0, 0, 0)";
+            document.getElementById("double-beef-burger-img").style.opacity="0";
+            document.getElementById("double-beef-burger-img").style.animation="none";
+            // -----------------------drink-------------------
+            document.getElementById("cocacola").style.backgroundColor="rgba(0, 0, 0, 0)";
+            document.getElementById("cocacola-img").style.opacity="0";
+            document.getElementById("cocacola-img").style.animation="none";
+
+        }
+        function out(){
+            // ---------------------pizaa-------------------
+            document.getElementById("margherita").style.backgroundColor="rgba(0, 0, 0, 0.5)";
+            document.getElementById("margherita_img").style.opacity="1";
+            document.getElementById("margherita_img").style.animation="fade-in-pizza 250s";
+
+            // -----------------------burger-------------------
+            document.getElementById("double-beef-burger").style.backgroundColor="rgba(0, 0, 0, 0.5)";
+            document.getElementById("double-beef-burger-img").style.opacity="1";
+            document.getElementById("double-beef-burger-img").style.animation="fade-in 2s";
+            // -----------------------drink-------------------
+            document.getElementById("cocacola").style.backgroundColor="rgba(0, 0, 0, 0.5)";
+            document.getElementById("cocacola-img").style.opacity="1";
+            document.getElementById("cocacola-img").style.animation="fade-in 2s";
+        }
+        out();
+
+    
 
     </script>
     
